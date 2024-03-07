@@ -47,9 +47,9 @@ This is where you should place all your application code.
 
 This is the entry point of the app.
 
-### /src/AppOne.ts
+### /src/TemplateApp.ts
 
-A sample app that copy the code from the babylon.js playground.
+A template app to start coding from
 
 ## Thank you
 
