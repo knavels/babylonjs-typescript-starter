@@ -2,8 +2,8 @@ import * as B from 'babylonjs'
 import 'babylonjs-loaders';
 
 export class TemplateApp {
-    private engine: B.Engine;
-    private scene: B.Scene;
+    engine: B.Engine;
+    scene: B.Scene;
 
     constructor(readonly canvas: HTMLCanvasElement) {
         // create BabylonJS engine with anti-aliasing activated
