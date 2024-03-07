@@ -1,13 +1,13 @@
-import * as B from 'babylonjs'
+import { Engine, FreeCamera, HemisphericLight, Scene, Vector3 } from 'babylonjs';
 import 'babylonjs-loaders';
 
 export class TemplateApp {
-    engine: B.Engine;
-    scene: B.Scene;
+    engine: Engine;
+    scene: Scene;
 
     constructor(readonly canvas: HTMLCanvasElement) {
         // create BabylonJS engine with anti-aliasing activated
-        this.engine = new B.Engine(canvas, true)
+        this.engine = new Engine(canvas, true)
 
         window.addEventListener('resize', () => {
             this.engine.resize();
@@ -35,20 +35,20 @@ export class TemplateApp {
     }
 }
 
-const createCamera = function (scene: B.Scene) {
-    const camera = new B.FreeCamera('camera', B.Vector3.Zero(), scene);
+const createCamera = function (scene: Scene) {
+    const camera = new FreeCamera('camera', Vector3.Zero(), scene);
     return camera;
 }
 
-const createLight = function (scene: B.Scene) {
-    const light = new B.HemisphericLight('light', new B.Vector3(0, 1, 0), scene);
+const createLight = function (scene: Scene) {
+    const light = new HemisphericLight('light', new Vector3(0, 1, 0), scene);
     return light;
 }
 
 
-const createScene = function (engine: B.Engine, canvas: HTMLCanvasElement) {
+const createScene = function (engine: Engine, canvas: HTMLCanvasElement) {
     // This creates a basic Babylon Scene object (non-mesh)
-    const scene = new B.Scene(engine);
+    const scene = new Scene(engine);
 
     createCamera(scene);
 
